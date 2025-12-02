@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIKTOK PAY - Pagamento</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .left, .right {
+            background: #fff;
+        }
+
+        /* Banner */
+        .banner img {
+            width: 100%;
+        }
+
+        /* Caixa da esquerda */
+        .left {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Caixa da direita */
+        .right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .pix-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+
+        /* BOTÃO */
+        .btn {
+            width: 100%;
+            background: black;
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <img 
+    src="https://bucket-production-a991.up.railway.app/dutty/checkout/9b3d0654-cb7c-4bff-b80b-5f8151783abb/1764204184970-1763569373385-1762431669697-pbylnd5slu31bmgv2ourx43hf.gif" 
+    alt="Banner"
+    style="
+        width: 780px;          /* tamanho menor */
+        
+        top: 20px;             /* distância do topo */
+        left: 20px;            /* distância da esquerda */
+    "
+>
+    </div>
+
+    <div class="container">
+
+        <!-- LADO ESQUERDO -->
+        <div class="left">
+            <h2>TIKTOK PAY</h2>
+            <p>Pague e receba</p>
+
+            <hr>
+
+            <div class="total">
+                Total: <strong>R$ 19,90</strong>
+            </div>
+        </div>
+
+        <!-- LADO DIREITO -->
+        <div class="right">
+
+            <!-- Identificação -->
+            <div class="card">
+                <div class="title">🧑 Identificação</div>
+
+                <label>Email</label>
+                <input type="email" placeholder="email@email.com">
+
+                <label style="margin-top:15px;">Nome Completo</label>
+                <input type="text" placeholder="Nome e Sobrenome">
+            </div>
+
+            <!-- Pagamento -->
+            <div class="card">
+                <div class="title">💳 Pagamento</div>
+
+                <div class="pix-option">
+                    <span style="font-size:22px;">◇</span>
+                    <div>
+                        <strong>Pagamento via Pix</strong><br>
+                        Aprovação imediata.
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTÃO GERAR PIX -->
+            <button class="btn" onclick="window.location.href='pagamento.php'">
+                GERAR PIX
+            </button>
+
+            <p style="font-size:12px; margin-top:10px; text-align:center; color:#777;">
+                Ao finalizar o pagamento você concorda com nossos termos de uso e privacidade.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
